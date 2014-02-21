@@ -6,11 +6,14 @@ Backups of my configuration files.
 config files
 --------
 - vim: `.vimrc`  
-- git: `.gitconfig`  
+- git: `.gitconfig`, `.gitmessage`
 - hexo: `_config.yml`
+- others: `.profile`
 
 manual install
 --------
     ln -s ~/repos/dotfiles/vim/.vimrc ~/.vimrc
     ln -s ~/repos/dotfiles/git/.gitconfig ~/.gitconfig
+    ln -s ~/repos/dotfiles/git/.gitmessage ~/.gitmessage
     ln -s ~/repos/dotfiles/hexo/_config.yml ~/hexo/_config.yml
+    ln -s ~/repos/dotfiles/others/.profile ~/.profile
