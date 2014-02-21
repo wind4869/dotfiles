@@ -1,0 +1,15 @@
+[user]
+	name = wind4869
+	email = windv587@gmail.com
+[credential]
+	helper = osxkeychain
+[commit]
+	template = /Users/wind/.gitmessage
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[color]
+	ui = true
