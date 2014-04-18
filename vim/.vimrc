@@ -74,7 +74,7 @@ set shiftwidth=4
 "vim内部的编码
 set encoding=utf-8
 "新建一个文件的默认编码
-set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbkgb2312,cp936
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 "输出到终端的编码
 set termencoding=utf-8
 "vim写入文件的时候采用的编码
@@ -84,6 +84,7 @@ set fileencoding=utf-8
 
 "----------------- 插件配置 -------------------------------------{{{1
 
+"""""""""""""""""""""neocomplcache"""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
 
 "----------------------------------------------------------------1}}}
