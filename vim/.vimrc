@@ -34,6 +34,8 @@ Bundle "pangloss/vim-javascript"
 filetype indent plugin on
 syntax on "开启语法高亮
 set nu "显示行号
+"关闭gui右边边框
+set go=
 "开启鼠标定位
 set mouse=a
 "关闭报警声音
