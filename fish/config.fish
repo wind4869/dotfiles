@@ -19,3 +19,6 @@ set PATH $HOME/repos/myscripts $PATH # This adds myscripts to env
 
 # For NVM from [https://github.com/Alex7Kom/nvm-fish/blob/master/nvm.fish]
 . $HOME/.nvm/nvm.fish # This loads NVM
+
+# For vim vundle
+set SHELL (which sh)

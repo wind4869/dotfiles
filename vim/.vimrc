@@ -1,37 +1,35 @@
-" -------- Bundles ---------------------------------------------{{{1
+"---------- Plugins ---------------------------------------------{{{1
 
 "首先，加载vundle!
-set nocompatible               " be iMproved
+set nocompatible               " be iMproved, required
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-"se git:// as default protocol. I hate that "hung up .."
-let g:vundle_default_git_proto="git"
-
-"vundle自己
-Bundle "gmarik/vundle"
+"let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
 "solarized配色
-Bundle "altercation/vim-colors-solarized"
+Plugin 'altercation/vim-colors-solarized'
 
 "自动补全插件
-Bundle "Shougo/neocomplcache"
+Plugin 'Shougo/neocomplcache'
 
 "自动关闭括号/引号等
-Bundle "jiangmiao/auto-pairs"
+Plugin 'jiangmiao/auto-pairs'
 
-"支持js的插件
-Bundle "jsbeautify"
-Bundle "pangloss/vim-javascript"
+"All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 "----------------------------------------------------------------1}}}
 
 "-------------- 基本 --------------------------------------------{{{1
 
-"针对文件类型自动缩进/加载插件
-filetype indent plugin on
 syntax on "开启语法高亮
 set nu "显示行号
 "关闭gui右边边框
@@ -88,5 +86,7 @@ set fileencoding=utf-8
 
 """""""""""""""""""""neocomplcache"""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
+
+"""""""""""""""""""""neocomplcache"""""""""""""""""
 
 "----------------------------------------------------------------1}}}
