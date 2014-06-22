@@ -7,8 +7,6 @@ filetype off                   " required!
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 "let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -16,8 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 "solarized配色
 Plugin 'altercation/vim-colors-solarized'
 
-"自动补全插件
-Plugin 'Shougo/neocomplcache'
+"A code-completion engine for Vim
+Plugin 'Valloric/YouCompleteMe'
 
 "自动关闭括号/引号等
 Plugin 'jiangmiao/auto-pairs'
@@ -84,9 +82,7 @@ set fileencoding=utf-8
 
 "----------------- 插件配置 -------------------------------------{{{1
 
-"""""""""""""""""""""neocomplcache"""""""""""""""""
-let g:neocomplcache_enable_at_startup = 1
-
-"""""""""""""""""""""neocomplcache"""""""""""""""""
-
+"""""""""""""""""""""YouCompleteMe"""""""""""""""""
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
 "----------------------------------------------------------------1}}}
