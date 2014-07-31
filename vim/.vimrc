@@ -21,7 +21,11 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'jiangmiao/auto-pairs'
 
 "Plugin to add tab bar
-Plugin 'TabBar'
+"Plugin 'TabBar'
+
+"Elegant buffer explorer
+Plugin 'fholgado/minibufexpl.vim'
+
 
 "Source code browser
 Plugin 'taglist.vim'
@@ -31,6 +35,9 @@ Plugin 'Lokaltog/powerline'
 
 "A tree explorer plugin for vim
 Plugin 'scrooloose/nerdtree'
+
+"A vim plugin for exploring the source code based on tags
+Plugin 'wesleyche/SrcExpl'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,11 +106,11 @@ let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 
 """""""""""""""""""""""""TabBar""""""""""""""""""""
-let g:Tb_MaxSize=2
-let g:Tb_TabWrap=1
+"let g:Tb_MaxSize=2
+"let g:Tb_TabWrap=1
 
 """""""""""""""""""""""""taglist"""""""""""""""""""
-"autocmd vimenter * Tlist
+" autocmd vimenter * Tlist
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let Tlist_Show_One_File = 1 "只显示当前文件的tag
 let Tlist_Exit_OnlyWindow = 1
@@ -117,13 +124,25 @@ source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
 
 """"""""""""""""""""""nerdtree"""""""""""""""""""""
 "vim启动的时候打开之
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 "打开一个未指明的文件时也打开之
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 "最后只剩下它的时候关闭vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "设置其宽度
 let NERDTreeWinSize=30
+
+""""""""""""""SrcExpl""""""""""""""""""""""""""""""
+"autocmd vimenter * SrcExpl
+let g:SrcExpl_winHeight = 8 
+let g:SrcExpl_refreshTime = 100 
+let g:SrcExpl_jumpKey = "<ENTER>" 
+let g:SrcExpl_gobackKey = "<SPACE>" 
+let g:SrcExpl_pluginList = [ 
+        \ "__Tag_List__", 
+        \ "_NERD_tree_" 
+    \ ] 
+let g:SrcExpl_updateTagsCmd = "/usr/local/bin/ctags --sort=foldcase -R ."
 
 """""""""""""""""""""cscope""""""""""""""""""""""""
 if has("cscope")
@@ -146,6 +165,7 @@ nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
 "----------------------------------------------------------------1}}}
 
 "----------------- 键绑定 ---------------------------------------{{{1
@@ -154,3 +174,5 @@ noremap <C-h> <C-w><left>
 noremap <C-j> <C-w><down>
 noremap <C-k> <C-w><up>
 noremap <C-l> <C-w><right>"
+
+"----------------------------------------------------------------1}}}
