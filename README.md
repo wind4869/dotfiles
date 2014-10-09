@@ -6,6 +6,7 @@ Backups of my configuration files.
 config files
 --------
 - vim: `.vimrc`, `.ycm_extra_conf.py`  
+- emacs: `.emacs`
 - git: `.gitconfig`, `.gitmessage`
 - hexo: `_config.yml`
 - bash: `.profile`
@@ -14,6 +15,7 @@ config files
 manual install
 --------
     ln -s ~/repos/dotfiles/vim/.vimrc ~/.vimrc
+    ln -s ~/repos/dotfiles/emacs/.emacs ~/.emacs
     ln -s ~/repos/dotfiles/vim/.ycm_extra_conf.py ~/.ycm_extra_conf.py
     ln -s ~/repos/dotfiles/git/.gitconfig ~/.gitconfig
     ln -s ~/repos/dotfiles/git/.gitmessage ~/.gitmessage
