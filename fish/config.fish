@@ -15,11 +15,11 @@ set fish_theme robbyrussell
 . $fish_path/oh-my-fish.fish
 
 # For env
-set PATH $HOME/repos/myscripts $PATH # This adds myscripts to env
+# set PATH $HOME/repos/myscripts $PATH # This adds myscripts to env
 
 # For pyenv
-set -x PATH "/usr/local/opt/pyenv/bin" $PATH # This adds pyenv to env
-. (pyenv init - | psub)
+# set -x PATH "/usr/local/opt/pyenv/bin" $PATH # This adds pyenv to env
+# . (pyenv init - | psub)
 
 # For NVM from [https://github.com/Alex7Kom/nvm-fish/blob/master/nvm.fish]
 . $HOME/.nvm/nvm.fish # This loads NVM

@@ -11,6 +11,7 @@ config files
 - hexo: `_config.yml`
 - bash: `.profile`
 - fish: `config.fish`
+- nvm: `nvm.fish`
 
 manual install
 --------
@@ -22,3 +23,4 @@ manual install
     ln -s ~/repos/dotfiles/hexo/_config.yml ~/hexo/_config.yml
     ln -s ~/repos/dotfiles/bash/.profile ~/.profile
     ln -s ~/repos/dotfiles/fish/config.fish ~/.config/fish/config.fish
+    ln -s ~/repos/dotfiles/nvm/nvm.fish ~/.nvm/nvm.fish
