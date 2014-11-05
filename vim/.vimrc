@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 "A code-completion engine for Vim
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 "Vim plugin, insert or delete brackets, parens, quotes in pair
 Plugin 'jiangmiao/auto-pairs'
@@ -25,7 +25,6 @@ Plugin 'jiangmiao/auto-pairs'
 
 "Elegant buffer explorer
 Plugin 'fholgado/minibufexpl.vim'
-
 
 "Source code browser
 Plugin 'taglist.vim'
@@ -38,6 +37,9 @@ Plugin 'scrooloose/nerdtree'
 
 "A vim plugin for exploring the source code based on tags
 Plugin 'wesleyche/SrcExpl'
+
+"Search Dash.app from Vim
+Plugin 'rizzatti/dash.vim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -104,10 +106,9 @@ set fileencoding=utf-8
 "----------------- 插件配置 -------------------------------------{{{1
 
 """""""""""""""""""""YouCompleteMe"""""""""""""""""
-"let g:ycm_confirm_extra_conf=0
-"let g:ycm_server_log_level = 'debug'
-"let g:ycm_server_log_level = 'debug'
-"let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf=0
+let g:ycm_server_log_level = 'debug'
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 """""""""""""""""""""""""TabBar""""""""""""""""""""
 "let g:Tb_MaxSize=2

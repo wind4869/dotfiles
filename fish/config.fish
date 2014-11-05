@@ -15,7 +15,7 @@ set fish_theme robbyrussell
 . $fish_path/oh-my-fish.fish
 
 # For env
-# set PATH $HOME/repos/myscripts $PATH # This adds myscripts to env
+set PATH $HOME/repos/myscripts $PATH # This adds myscripts to env
 
 # For pyenv
 # set -x PATH "/usr/local/opt/pyenv/bin" $PATH # This adds pyenv to env
