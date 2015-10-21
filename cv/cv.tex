@@ -1,0 +1,73 @@
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv 主题
+\moderncvstyle{banking}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
+\moderncvcolor{orange}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
+%\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+
+% 字符编码
+\usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
+\usepackage{CJKutf8}
+
+% 调整页面出血
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+
+% 个人信息
+\name{}{郝有强}
+\title{C++研发工程师}
+\phone[mobile]{137-0361-5434}
+\email{windv587@gmail.com}
+\social[github]{wind4869}
+\address{黑龙江省哈尔滨市南岗区西大直街92号新技术楼511室}{150001}
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
+\maketitle
+
+\section{教育背景}
+\cventry{2014.09 -- 2016.07}{硕士}{哈尔滨工业大学}{计算机科学与技术}{\textit{成绩良好(保送)}}{}  % 第3到第6编码可留白
+\cventry{2010.09 -- 2014.06}{本科}{哈尔滨工业大学}{计算机科学与技术}{\textit{成绩良好(年级前20\%)}}{}  % 第3到第6编码可留白
+
+\section{专业技能}
+\cvitem{编程语言}{\small 熟练使用 C/C++，熟悉 Java、Python、Shell 等编程语言}
+\cvitem{操作系统}{\small 熟悉 Linux/Unix 开发环境，长期使用 Ubuntu 和 OS X 进行开发}
+\cvitem{软件工具}{\small 熟练使用 Vim、Git、GDB，熟悉 MySQL、Redis 等常用软件工具}
+\cvitem{其他技能}{\small 熟练掌握基本的数据结构和算法，有良好的编程习惯和团队协作能力}
+
+\section{外语能力}
+\cvitemwithcomment{英语}{CET6}{读写能力和口语水平良好}
+
+\section{项目经验}
+\cvlistitem{2015年 -- 基于Reactor模式的TCP网络库\\ -- {\small C++程序库开发项目。基于个人兴趣，独自一人使用C++11和Boost库实现的TCP网络库，以64位Ubuntu14.04 LTS为平台，主要使用non-blocking IO + one loop per thread模式支持服务器端编程，核心代码3000多行，目前能够支持自己编写服务器端程序。}}
+\cvlistitem{2014年 -- 个人数据云系统\\ -- {\small Java Web应用开发项目。实验室的项目，作为核心开发者使用Java(Struts2框架)实现的Web应用，主要抓取用户来自淘宝、豆瓣、微博等平台的个人数据，使用数据本体统一描述并存储入库，最后提供操纵数据的API给开发者，目前投入使用作为服务协同机理研究的实验平台。}}
+\cvlistitem{2013年 -- 基于LR的编译器前端\\ -- {\small Python应用开发项目。编译原理的课程设计，独自一人使用Python实现的编译器前端，参考Python的语法设计了一种新的简易编程语言，并实现了词法分析、语法分析、语义分析阶段的主要功能，核心代码1000多行，最后能够输出平台无关的中间代码。}}
+\section{实践经历}
+2014年 -- 担任大三《软件工程》课程TA，协助任课教师指导学生完成了结对编程、MVC编程与云平台部署、软件项目管理与版本控制、单元测试与代码评审、OO分析与设计等多次实验
+
+\section{获奖情况}
+\cvlistitem{2012年 -- 美国大学生数学建模竞赛(MCM/ICM)三等奖}
+\cvlistitem{2012年 -- 2014年 -- 研究生一等奖学金、多次人民奖学金}
+
+\clearpage\end{CJK}
+\end{document}
+
+%% 文件结尾 `template-zh.tex'.

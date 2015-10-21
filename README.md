@@ -1,17 +1,18 @@
 dotfiles
 ========
 
-Backups of my configuration files.
+Backups of my important files.
 
-config files
+file list
 --------
 - vim: `.vimrc`, `.ycm_extra_conf.py`
 - git: `.gitconfig`, `.gitmessage`
 - fish: `config.fish`
 - nvm: `nvm.fish`
 - hexo: `_config.yml`
+- cv: `cv.tex`, `cv.pdf`
 
-manual install
+config files
 --------
     ln -s ~/repos/dotfiles/vim/.vimrc ~/.vimrc
     ln -s ~/repos/dotfiles/vim/.ycm_extra_conf.py ~/.ycm_extra_conf.py
