@@ -14,7 +14,7 @@ set fish_theme robbyrussell
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
-# For env
+# For myscripts
 set PATH $HOME/repos/myscripts $PATH # This adds myscripts to env
 
 # For pyenv
@@ -26,3 +26,36 @@ set PATH $HOME/repos/myscripts $PATH # This adds myscripts to env
 
 # For vim vundle
 set SHELL (which sh)
+
+# For autojump
+set SHELL (which fish)
+[ -f /usr/local/share/autojump/autojump.fish  ]; and . /usr/local/share/autojump/autojump.fish
+
+# For core dump file
+ulimit -c unlimited
+
+# For thefuck
+function fuck -d 'Correct your previous console command'
+    set -l exit_code $status
+    set -l eval_script (mktemp 2>/dev/null ; or mktemp -t 'thefuck')
+    set -l fucked_up_commandd $history[1]
+    thefuck $fucked_up_commandd > $eval_script
+    . $eval_script
+    rm $eval_script
+    if test $exit_code -ne 0
+        history --delete $fucked_up_commandd
+    end
+end
+
+# For go
+set -x GOPATH $HOME/workspace/gopath # set $GOPATH
+set PATH $GOPATH/bin $PATH # This adds $GOPATH/bin to env
+
+# For hub
+alias git=hub
+
+# For hadoop
+set PATH /usr/local/Cellar/hadoop/2.7.1/sbin $PATH
+alias hstart="start-dfs.sh; start-yarn.sh"
+alias hstop="stop-yarn.sh; stop-dfs.sh"
+

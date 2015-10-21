@@ -46,7 +46,7 @@ set incsearch
 set shortmess=atI
 "支持退格键
 set backspace=indent,eol,start
-set guifont=Monaco\ for\ Powerline:h12 "设置字体
+set guifont=Monaco\ for\ Powerline:h13 "设置字体
 
 "solarized配色设置
 let g:solarized_termcolors=256

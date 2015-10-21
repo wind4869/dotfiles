@@ -1,8 +1,0 @@
-(package-initialize)
-(evil-mode 1)
-(global-linum-mode 1)
-(electric-pair-mode t)
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
-(setq scheme-program-name "/usr/local/bin/mit-scheme")
