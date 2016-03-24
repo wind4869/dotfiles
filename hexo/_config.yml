@@ -70,23 +70,9 @@ archive_generator:
 tag_generator:
   per_page: 0
 
-# Category
-category_generator:
-  per_page: 0
-
-# Disqus
-disqus_shortname: gitcafe
-
 # Extensions
-## Plugins: http://hexo.io/plugins/
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-sitemap:
-    path: sitemap.xml
-
-## Themes: http://hexo.io/themes/
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
 theme: modernist
 
 # Deployment
