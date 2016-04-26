@@ -14,6 +14,9 @@ Plugin 'gmarik/Vundle.vim'
 "precision colorscheme for the vim text editor
 Plugin 'altercation/vim-colors-solarized'
 
+"A dark theme for vim
+"Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+
 "A code-completion engine for Vim
 "Plugin 'Valloric/YouCompleteMe'
 

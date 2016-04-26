@@ -10,7 +10,6 @@ file list
 - git: `.gitconfig`, `.gitmessage`
 - hexo: `_config.yml`
 - cv: `cv.tex`, `cv.pdf`
-- sublime: `Preferences.sublime-settings`
 
 config files
 --------
