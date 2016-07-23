@@ -22,3 +22,11 @@ eval (thefuck --alias | tr '\n' ';')
 
 # For autojump
 [ -f /usr/local/share/autojump/autojump.fish  ]; and . /usr/local/share/autojump/autojump.fish
+
+# For gnu commands
+set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+
+# For Homebrew
+set PATH /usr/local/sbin $PATH
+

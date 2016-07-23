@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 "A dark theme for vim
-"Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'dracula/vim'
 
 "A code-completion engine for Vim
 "Plugin 'Valloric/YouCompleteMe'
@@ -55,12 +55,16 @@ set backspace=indent,eol,start
 set guifont=Monaco\ for\ Powerline:h13 "设置字体
 
 "solarized配色设置
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-set background=dark "暗色背景
-colorscheme solarized "设置配色
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
+"set background=dark "暗色背景
+"colorscheme solarized "设置配色
+
+"dracula配色设置
+color dracula
+
 set cul "高亮当前行
 
 "----------------------------------------------------------------1}}}
@@ -101,4 +105,32 @@ set fileencoding=utf-8
 """"""""""""""""""powerline""""""""""""""""""""""""
 set laststatus=2
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
+
+"""""""""""""""""""""ctags"""""""""""""""""""""""""
+set autochdir
+set tags=tags
+
+"""""""""""""""""""""cscope""""""""""""""""""""""""
+if has("cscope")
+  set csprg=/usr/local/bin/cscope
+  set csto=1
+  set cst
+  set nocsverb
+  " add any database in current directory
+  if filereadable("cscope.out")
+      cs add cscope.out
+  endif
+  set csverb
+endif
+
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
 "----------------------------------------------------------------1}}}
+
