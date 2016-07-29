@@ -11,14 +11,8 @@ call vundle#begin()
 "let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-"precision colorscheme for the vim text editor
-Plugin 'altercation/vim-colors-solarized'
-
 "A dark theme for vim
 Plugin 'dracula/vim'
-
-"A code-completion engine for Vim
-"Plugin 'Valloric/YouCompleteMe'
 
 "Vim plugin, insert or delete brackets, parens, quotes in pair
 Plugin 'jiangmiao/auto-pairs'
@@ -53,14 +47,6 @@ set shortmess=atI
 "支持退格键
 set backspace=indent,eol,start
 set guifont=Monaco\ for\ Powerline:h13 "设置字体
-
-"solarized配色设置
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
-"set background=dark "暗色背景
-"colorscheme solarized "设置配色
 
 "dracula配色设置
 color dracula
@@ -97,18 +83,9 @@ set fileencoding=utf-8
 
 "----------------- 插件配置 -------------------------------------{{{1
 
-"""""""""""""""""""""YouCompleteMe"""""""""""""""""
-"let g:ycm_confirm_extra_conf=0
-"let g:ycm_server_log_level = 'debug'
-"let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-
 """"""""""""""""""powerline""""""""""""""""""""""""
 set laststatus=2
 source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
-
-"""""""""""""""""""""ctags"""""""""""""""""""""""""
-set autochdir
-set tags=tags
 
 """""""""""""""""""""cscope""""""""""""""""""""""""
 if has("cscope")
@@ -123,14 +100,14 @@ if has("cscope")
   set csverb
 endif
 
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 "----------------------------------------------------------------1}}}
 
