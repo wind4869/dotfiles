@@ -115,3 +115,8 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # For Homebrew
 export PATH="/usr/local/sbin:$PATH"
 
+# For hadoop
+export PATH="/usr/local/Cellar/hadoop/2.7.2/sbin:$PATH"
+alias hstart="start-dfs.sh && start-yarn.sh"
+alias hstop="stop-yarn.sh && stop-dfs.sh"
+

@@ -30,3 +30,8 @@ set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 # For Homebrew
 set PATH /usr/local/sbin $PATH
 
+# For hadoop
+set PATH /usr/local/Cellar/hadoop/2.7.2/sbin $PATH
+alias hstart="start-dfs.sh; start-yarn.sh"
+alias hstop="stop-yarn.sh; stop-dfs.sh"
+
