@@ -14,6 +14,9 @@ Plugin 'gmarik/Vundle.vim'
 "A dark theme for vim
 Plugin 'dracula/vim'
 
+"A code-completion engine for Vim
+"Plugin 'Valloric/YouCompleteMe'
+
 "Vim plugin, insert or delete brackets, parens, quotes in pair
 Plugin 'jiangmiao/auto-pairs'
 
@@ -82,6 +85,11 @@ set fileencoding=utf-8
 "----------------------------------------------------------------1}}}
 
 "----------------- 插件配置 -------------------------------------{{{1
+
+"""""""""""""""""""""YouCompleteMe"""""""""""""""""
+"let g:ycm_confirm_extra_conf=0
+"let g:ycm_server_log_level = 'debug'
+"let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 """"""""""""""""""powerline""""""""""""""""""""""""
 set laststatus=2
