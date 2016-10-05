@@ -6,7 +6,6 @@ Backups of my important files.
 file list
 --------
 - zsh: `.zshrc`
-- tmux: `.tmux.conf`
 - fish: `config.fish`
 - vim: `.vimrc`, `.ycm_extra_conf.py`
 - git: `.gitconfig`, `.gitmessage`
@@ -16,7 +15,6 @@ file list
 config files
 --------
     ln -s ~/repos/dotfiles/zsh/.zshrc ~/.zshrc
-    ln -s ~/repos/dotfiles/tmux/.tmux.conf ~/.tmux.conf
     ln -s ~/repos/dotfiles/fish/config.fish ~/.config/fish/config.fish
     ln -s ~/repos/dotfiles/vim/.vimrc ~/.vimrc
     ln -s ~/repos/dotfiles/vim/.ycm_extra_conf.py ~/.ycm_extra_conf.py
