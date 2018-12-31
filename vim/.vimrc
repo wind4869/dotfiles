@@ -14,14 +14,11 @@ Plugin 'gmarik/Vundle.vim'
 "A dark theme for vim
 Plugin 'dracula/vim'
 
-"A code-completion engine for Vim
-"Plugin 'Valloric/YouCompleteMe'
-
 "Vim plugin, insert or delete brackets, parens, quotes in pair
 Plugin 'jiangmiao/auto-pairs'
 
-"Powerline is a statusline plugin for vim
-Plugin 'Lokaltog/powerline'
+"lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline'
 
 "Make Vim play nicely with iTerm 2 and tmux
 Plugin 'sjl/vitality.vim'
@@ -36,10 +33,8 @@ filetype plugin indent on    " required
 
 syntax on "开启语法高亮
 set nu "显示行号
-"关闭gui右边边框
-set go=
 "开启鼠标定位
-set mouse=a
+set mouse=r
 "关闭报警声音
 set noeb
 "高亮搜索结果
@@ -49,7 +44,7 @@ set incsearch
 set shortmess=atI
 "支持退格键
 set backspace=indent,eol,start
-set guifont=Monaco\ for\ Powerline:h13 "设置字体
+set guifont=Monaco:h13 "设置字体
 
 "dracula配色设置
 color dracula
@@ -86,36 +81,7 @@ set fileencoding=utf-8
 
 "----------------- 插件配置 -------------------------------------{{{1
 
-"""""""""""""""""""""YouCompleteMe"""""""""""""""""
-"let g:ycm_confirm_extra_conf=0
-"let g:ycm_server_log_level = 'debug'
-"let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-
-""""""""""""""""""powerline""""""""""""""""""""""""
-set laststatus=2
-source ~/.vim/bundle/powerline/powerline/bindings/vim/plugin/powerline.vim
-
-"""""""""""""""""""""cscope""""""""""""""""""""""""
-if has("cscope")
-  set csprg=/usr/local/bin/cscope
-  set csto=1
-  set cst
-  set nocsverb
-  " add any database in current directory
-  if filereadable("cscope.out")
-      cs add cscope.out
-  endif
-  set csverb
-endif
-
-nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
+""""""""""""""""""airline""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
 "----------------------------------------------------------------1}}}
 

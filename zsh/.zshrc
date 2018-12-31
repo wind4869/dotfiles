@@ -50,7 +50,7 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git extract emoji-clock zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -84,11 +84,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# For myscripts
-export PATH="$HOME/repos/myscripts:$PATH"
+# For fixing pycharm's bug
+export PATH="/usr/local/bin:$PATH"
 
-# For go
-export GOPATH="$HOME/workspace/gopath"
+# For homebrew
+export PATH="/usr/local/sbin:$PATH"
+
+# For golang
+export GOPATH="$HOME/.golang"
 export PATH="$GOPATH/bin:$PATH"
 
 # For hub
@@ -96,11 +99,6 @@ alias git="hub"
 
 # For ls
 alias ls="ls --color"
-
-# For thefuck
-eval "$(thefuck --alias)"
-# You can use whatever you want as an alias, like for Mondays:
-eval "$(thefuck --alias FUCK)"
 
 # For autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
@@ -112,11 +110,16 @@ eval "$(thefuck --alias FUCK)"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-# For Homebrew
-export PATH="/usr/local/sbin:$PATH"
+# For nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# For hadoop
-export PATH="/usr/local/Cellar/hadoop/2.7.3/sbin:$PATH"
-alias hstart="start-dfs.sh && start-yarn.sh"
-alias hstop="stop-yarn.sh && stop-dfs.sh"
+# For myscripts
+export PATH="$HOME/repos/myscripts:$PATH"
 
+# For Chinese
+export LANG=en_US.UTF-8
+
+# added by travis gem
+[ -f /Users/wind/.travis/travis.sh ] && source /Users/wind/.travis/travis.sh
