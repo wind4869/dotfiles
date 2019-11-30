@@ -7,12 +7,12 @@ title: 404 Not Found
 subtitle: Personal Notes
 description:
 author: wind4869
-language: zh-Hans 
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://wind4869.com
+url: https://wind4869.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -87,5 +87,5 @@ math:
 deploy:
   type: git
   # repo: https://github.com/wind4869/wind4869.github.io
-  repo: git-server:~/hexo.git
+  repo: git-server:hexo.git
   branch: master
