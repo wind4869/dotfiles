@@ -84,11 +84,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# For fixing pycharm's bug
-export PATH="/usr/local/bin:$PATH"
-
 # For homebrew
 export PATH="/usr/local/sbin:$PATH"
+
+# For python
+export BETTER_EXCEPTIONS=1
 
 # For golang
 export GOPATH="$HOME/.golang"
